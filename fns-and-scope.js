@@ -5,13 +5,23 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+  isTyler = (name) => {
+    if(name === 'Tyler') {
+      return true;
+    }else {
+      return false;
+    }
+  }
 
 //////////////////PROBLEM 2////////////////////
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
-
+getName = () => {
+  var name = prompt('What is your name?')
+  return name;
+}
   //Code Here
 
 
@@ -23,6 +33,9 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+  welcome = () => {
+    alert('Welcome, ' + getName())
+  }
 
 
 //////////////////PROBLEM 4////////////////////
@@ -54,11 +67,15 @@ var name = 'Tyler';
 
   //Code Here
   
+  myName = () => {
+    return 'Megan';
+  }
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+  var newMyName = myName
 
 //Now alert the result of invoking newMyName
 
@@ -70,10 +87,19 @@ var name = 'Tyler';
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
+outerFn = () => {
+  return () => {
+    return 'Megan';
+  }
+}
+
   //Code Here
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
+  var innerFn = outerFn()
+
 //Now invoke innerFn.
+innerFn()
